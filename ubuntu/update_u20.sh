@@ -85,7 +85,7 @@ echo "更新执行文件"
 ##mv -f /usr/lib/systemd/system/sshd.service /usr/lib/systemd/system/sshd.service_bak >/dev/null 2>&1
 if [ ! -f /etc/init.d/ssh ] ;
 then
-    \cp -f /home/update/openssh-${SSH_VER}/contrib/redhat/sshd.init /etc/init.d/ssh
+    \cp -f /home/update/openssh-${SSH_VER}/opensshd.init /etc/init.d/ssh
 fi
 echo "备份sshd_config,ssh_config为sshd_config.bak,ssh_config.bak"
 mv -b /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
