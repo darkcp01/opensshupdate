@@ -17,7 +17,7 @@ echo "安装依赖中,时间较长,请勿退出"
 yum install gcc gcc-c++ glibc make autoconf openssl-devel pcre-devel pam-devel zlib zlib-devel tcp_wrappers-devel tcp_wrappers -y >/dev/null 2>&1
 
 echo "下载openssl和openssh安装包"
-if [  ! -f  openssl-"${SSL_VER}".tar.gz ];then
+if [ ! -f openssl-"${SSL_VER}".tar.gz ];then
 	wget https://www.openssl.org/source/openssl-"${SSL_VER}".tar.gz --no-check-certificate
 fi
 
@@ -25,7 +25,7 @@ if [ ! -f openssh-"${SSH_VER}".tar.gz ];then
     wget https://mirrors.aliyun.com/openssh/portable/openssh-"${SSH_VER}".tar.gz --no-check-certificate
 fi
 
-if [  -f  openssl-"${SSL_VER}".tar.gz ] && [ -f openssh-"${SSH_VER}".tar.gz ];then
+if [ -f openssl-"${SSL_VER}".tar.gz ] && [ -f openssh-"${SSH_VER}".tar.gz ];then
     echo "解压中......"
 	tar -xvzf /home/update/openssl-"${SSL_VER}".tar.gz >/dev/null 2>&1
 	tar -xvzf /home/update/openssh-"${SSH_VER}".tar.gz >/dev/null 2>&1
