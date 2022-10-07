@@ -1,7 +1,7 @@
 #!/bin/bash
 ##仅适用于CentOS 7
 SSL_VER=1.1.1q
-SSH_VER=9.0p1
+SSH_VER=9.1p1
 
 path="/home/update"
 if [ $path != "$PWD" ];then
