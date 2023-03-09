@@ -75,6 +75,8 @@ else
 fi
 
 echo "更新执行文件"
+mkdir /home/update/bin
+mv -b /usr/local/bin/ssh* /usr/local/bin/sftp /home/update/bin/
 \cp -f /usr/local/openssh/sbin/sshd /usr/sbin/
 \cp -f /usr/local/openssh/bin/* /usr/bin/
 \cp -f /usr/local/openssh/libexec/* /usr/libexec/
