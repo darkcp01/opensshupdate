@@ -53,7 +53,7 @@ fi
 
 ln -sf /usr/local/openssl/bin/openssl /usr/bin/openssl
 ln -sf /usr/local/openssl/include/openssl /usr/include/openssl
-sed -i "1/usr/local/openssl/lib" /etc/ld.so.conf.d/openssl.conf  && ldconfig -v >/dev/null 2>&1
+sed -i "1i/usr/local/openssl/lib" /etc/ld.so.conf  && ldconfig -v >/dev/null 2>&1
 openssl version
 
 echo "安装openssh中......"
