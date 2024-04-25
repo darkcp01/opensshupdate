@@ -1,6 +1,5 @@
 #!/bin/bash
 ###请放到/home/update下执行,自行配置好apt源,只支持Ubuntu 22
-SSL_VER=3.3.0
 SSH_VER=9.7p1
 
 path="/home/update"
