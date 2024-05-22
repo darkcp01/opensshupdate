@@ -1,6 +1,6 @@
 #!/bin/bash
 ###放到/home/update下执行,只支持 Ubuntu 18 20 不支持22 勇士可以试下16
-SSL_VER=1.1.1w
+SSL_VER=3.3.0
 SSH_VER=9.6p1
 
 path="/home/update"
@@ -9,8 +9,8 @@ if [ $path != "$PWD" ];then
         exit 1
 fi
 
-\cp -f /usr/lib/x86_64-linux-gnu/libcrypto.so.1* /home/update
-\cp -f /usr/lib/x86_64-linux-gnu/libssl.so.1* /home/update
+\cp -f /usr/lib/x86_64-linux-gnu/libcrypto.so.3* /home/update >/dev/null 2>&1
+\cp -f /usr/lib/x86_64-linux-gnu/libssl.so.3* /home/update >/dev/null 2>&1
 \cp -f /etc/init.d/ssh /home/update/ssh.bak >/dev/null 2>&1
 
 echo "安装依赖中,时间较长,请勿退出"
@@ -42,7 +42,7 @@ mv -f /usr/bin/openssl /usr/bin/openssl.bak >/dev/null 2>&1
 mv -f /usr/include/openssl /usr/include/openssl.bak >/dev/null 2>&1
 mv -b /usr/local/openssl /usr/local/openssl.bak >/dev/null 2>&1
 cd /home/update/openssl-${SSL_VER}
-./config  --prefix=/usr/local/openssl   shared zlib >> /home/update/info${DATE_DAY}.log 2>& 1
+./config  --prefix=/usr/local/openssl shared zlib >> /home/update/info${DATE_DAY}.log 2>& 1
 make >> /home/update/info${DATE_DAY}.log 2>& 1
 make install >> /home/update/info${DATE_DAY}.log 2>& 1
 
@@ -56,7 +56,7 @@ fi
 
 ln -sf /usr/local/openssl/bin/openssl /usr/bin/openssl
 ln -sf /usr/local/openssl/include/openssl /usr/include/openssl
-echo "/usr/local/openssl/lib" > /etc/ld.so.conf.d/openssl.conf  && ldconfig -v >/dev/null 2>&1
+echo "/usr/local/openssl/lib64" > /etc/ld.so.conf.d/openssl.conf  && ldconfig -v >/dev/null 2>&1
 openssl version
 
 echo "安装openssh中......"
