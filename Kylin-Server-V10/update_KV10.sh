@@ -9,8 +9,8 @@ if [ $path != "$PWD" ];then
         exit 1
 fi
 
-\cp -f /usr/lib64/libcrypto.so.3* /home/update
-\cp -f /usr/lib64/libssl.so.3* /home/update
+\cp -f /usr/lib64/libcrypto.so.3* /home/update >/dev/null 2>&1
+\cp -f /usr/lib64/libssl.so.3* /home/update >/dev/null 2>&1
 \cp -f /etc/init.d/sshd /home/update/sshd.bak >/dev/null 2>&1
 
 echo "安装依赖中,时间较长,请勿退出"
