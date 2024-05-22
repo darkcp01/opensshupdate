@@ -1,7 +1,7 @@
 #!/bin/bash
 ###放到/home/update下执行,只支持 Ubuntu 18 20 不支持22 勇士可以试下16
 SSL_VER=3.3.0
-SSH_VER=9.6p1
+SSH_VER=9.7p1
 
 path="/home/update"
 if [ $path != "$PWD" ];then
