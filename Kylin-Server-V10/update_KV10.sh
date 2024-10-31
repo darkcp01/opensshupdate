@@ -1,7 +1,7 @@
 #!/bin/bash
 ##放到/home/update下执行,自行先配置好yum源，适用于Kylin-Server-V10
-SSL_VER=3.3.0
-SSH_VER=9.7p1
+SSL_VER=3.4.0
+SSH_VER=9.9p1
 
 path="/home/update"
 if [ $path != "$PWD" ];then
@@ -18,7 +18,7 @@ yum install gcc gcc-c++ glibc make autoconf openssl-devel pcre-devel pam-devel z
 
 echo "下载openssl和openssh安装包"
 if [ ! -f openssl-"${SSL_VER}".tar.gz ];then
-	wget https://www.openssl.org/source/openssl-"${SSL_VER}".tar.gz --no-check-certificate
+	wget https://github.com/openssl/openssl/releases/download/openssl-"${SSL_VER}"/openssl-"${SSL_VER}".tar.gz --no-check-certificate
 fi
 
 if [ ! -f openssh-"${SSH_VER}".tar.gz ];then
