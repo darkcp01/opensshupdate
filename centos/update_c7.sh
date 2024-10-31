@@ -1,7 +1,7 @@
 #!/bin/bash
 ##仅适用于CentOS 7
-SSL_VER=1.1.1w
-SSH_VER=9.7p1
+SSL_VER=3.4.0
+SSH_VER=9.9p1
 
 path="/home/update"
 if [ $path != "$PWD" ];then
@@ -18,7 +18,7 @@ yum install gcc gcc-c++ glibc make autoconf openssl-devel pcre-devel pam-devel z
 
 echo "下载openssl和openssh安装包"
 if [ ! -f openssl-"${SSL_VER}".tar.gz ];then
-	wget https://www.openssl.org/source/openssl-"${SSL_VER}".tar.gz --no-check-certificate
+	wget https://github.com/openssl/openssl/releases/download/openssl-"${SSL_VER}"/openssl-"${SSL_VER}".tar.gz --no-check-certificate
 fi
 
 if [ ! -f openssh-"${SSH_VER}".tar.gz ];then
@@ -53,7 +53,7 @@ fi
 
 ln -sf /usr/local/openssl/bin/openssl /usr/bin/openssl
 ln -sf /usr/local/openssl/include/openssl /usr/include/openssl
-echo "/usr/local/openssl/lib" > /etc/ld.so.conf.d/openssl.conf  && ldconfig -v >/dev/null 2>&1
+echo "/usr/local/openssl/lib64" > /etc/ld.so.conf.d/openssl.conf  && ldconfig -v >/dev/null 2>&1
 openssl version
 
 echo "安装openssh中......"
