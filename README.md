@@ -6,7 +6,7 @@
 
 cd /home/update
 
-wget https://gitee.com/darkcp/opensshupdate/raw/master/centos/update_ub.sh --no-check-certificate
+wget https://gitee.com/darkcp/opensshupdate/raw/master/ubuntu/update_ub.sh --no-check-certificate
 
 chmod +x update_ub.sh
 
