@@ -1,5 +1,5 @@
 #!/bin/bash
-###请放到/home/update下执行,自行配置好apt源,只支持Ubuntu 22
+###请放到/home/update下执行,自行配置好apt源,支持Ubuntu 18-22
 SSL_VER=3.4.0
 SSH_VER=9.9p1
 
