@@ -80,8 +80,7 @@ mv -b /usr/local/bin/ssh* /usr/local/bin/sftp /home/update/bin/ >/dev/null 2>&1
 \cp -f /usr/local/openssh/sbin/sshd /usr/sbin/
 \cp -f /usr/local/openssh/bin/* /usr/bin/
 \cp -f /usr/local/openssh/libexec/* /usr/libexec/
-##sed -i 's/Type=notify/Type=simple/' /usr/lib/systemd/system/sshd.service
-##mv -f /usr/lib/systemd/system/sshd.service /usr/lib/systemd/system/sshd.service_bak >/dev/null 2>&1
+##sed -i 's/Type=notify/Type=simple/' /usr/lib/systemd/system/sshd.service      另一种方法
 if [ ! -f /etc/init.d/ssh ];then
     \cp -f /home/update/openssh-${SSH_VER}/opensshd.init /etc/init.d/ssh
 fi
