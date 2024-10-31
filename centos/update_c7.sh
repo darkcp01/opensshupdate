@@ -14,7 +14,7 @@ fi
 \cp -f /etc/init.d/sshd /home/update/sshd.bak >/dev/null 2>&1
 
 echo "安装依赖中,时间较长,请勿退出"
-yum install gcc gcc-c++ glibc make autoconf openssl-devel pcre-devel pam-devel zlib zlib-devel tcp_wrappers-devel tcp_wrappers -y >/dev/null 2>&1
+yum install perl-IPC-Cmd gcc gcc-c++ glibc make autoconf openssl-devel pcre-devel pam-devel zlib zlib-devel tcp_wrappers-devel tcp_wrappers -y >/dev/null 2>&1
 
 echo "下载openssl和openssh安装包"
 if [ ! -f openssl-"${SSL_VER}".tar.gz ];then
