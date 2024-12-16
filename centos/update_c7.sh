@@ -1,5 +1,5 @@
 #!/bin/bash
-##仅适用于CentOS 7
+##适用于CentOS 7，openeuler
 SSL_VER=3.4.0
 SSH_VER=9.9p1
 
