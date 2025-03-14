@@ -1,6 +1,6 @@
 #!/bin/bash
 ###请放到/home/update下执行,自行配置好apt源,支持Ubuntu 18-22，ssl版本只能选3.0.0以上的
-SSL_VER=3.4.0
+SSL_VER=3.4.1
 SSH_VER=9.9p1
 
 path="/home/update"
