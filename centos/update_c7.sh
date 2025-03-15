@@ -1,6 +1,6 @@
 #!/bin/bash
 ##适用于CentOS 7，openeuler
-SSL_VER=3.4.0
+SSL_VER=3.4.1
 SSH_VER=9.9p1
 
 path="/home/update"
