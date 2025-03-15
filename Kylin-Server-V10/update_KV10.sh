@@ -1,6 +1,6 @@
 #!/bin/bash
 ##放到/home/update下执行,自行先配置好yum源，适用于Kylin-Server-V10
-SSL_VER=3.4.0
+SSL_VER=3.4.1
 SSH_VER=9.9p1
 
 path="/home/update"
