@@ -1,7 +1,7 @@
 #!/bin/bash
-###请放到/home/update下执行,自行配置好apt源,支持Ubuntu 18-22，ssl版本只能选3.0.0以上的
-SSL_VER=3.4.1
-SSH_VER=9.9p1
+###请放到/home/update下执行,自行配置好apt源,支持Ubuntu 18-24，通过修改SSL_VER和SSH_VER变量可自定义升级版本，openssl版本只能选3.0.0以上的
+SSL_VER=3.5.0
+SSH_VER=10.0p1
 
 path="/home/update"
 if [ $path != "$PWD" ];then
@@ -97,5 +97,5 @@ systemctl unmask ssh >/dev/null 2>&1
 systemctl start sshd
 ssh -V
 cd /home/update
-echo "安装完成，若无问题可删除/home/update目录"
+echo "安装完成，若无问题可删除/home/update目录，如果帮到你了记得点个赞https://gitee.com/darkcp/opensshupdate"
 exit 0
