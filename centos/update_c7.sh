@@ -1,7 +1,7 @@
 #!/bin/bash
 ##请放到/home/update下执行,自行配置好yum源,适用于CentOS 7，openeuler，通过修改SSL_VER和SSH_VER变量可自定义升级版本，openssl版本只能选3.0.0以上的
 SSL_VER=3.5.0
-SSH_VER=10.1p1
+SSH_VER=10.0p1
 
 path="/home/update"
 if [ $path != "$PWD" ];then
